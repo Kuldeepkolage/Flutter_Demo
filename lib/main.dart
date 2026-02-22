@@ -141,6 +141,62 @@ class MyHomePage extends StatelessWidget {
         )
     ),
 
+      endDrawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("Kuldeep Kolage"),
+              accountEmail: Text("kolagekuldeep09@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: NetworkImage("https://webstockreview.net/images/images-png-10.png"),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              onDetailsPressed: (){
+                MyMessage("Details of my account", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: (){
+                MyMessage("This is home", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text("Favorite"),
+              onTap: (){
+                MyMessage("This is favorite", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Contact Us"),
+              onTap: (){
+                MyMessage("Contact Us", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("Settings"),
+              onTap: (){
+                MyMessage("This is Settings", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Logout"),
+              onTap: (){
+                MyMessage("This is logout", context);
+              },
+            ),
+          ],
+        ),
+      ),
+
+
 
       body: const Center(
         child: Text("Hello World!"),
