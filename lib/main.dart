@@ -99,7 +99,7 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.blue,
               ),
               onDetailsPressed: (){
-                MyMessage("Details of your account", context);
+                MyMessage("Details of my account", context);
               },
             ),
             ListTile(
